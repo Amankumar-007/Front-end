@@ -1,0 +1,55 @@
+body {
+  background: #f7e8ff;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+.todo-container {
+  background: #fff;
+  padding: 2rem 2.5rem;
+  border-radius: 14px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+  width: 340px;
+  animation: fade-in 0.7s cubic-bezier(.68,-0.55,.27,1.55);
+}
+@keyframes fade-in {
+  0% { opacity: 0; transform: translateY(30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+h2 {
+  margin-top: 0;
+  color: #a259ff;
+}
+#todo-input {
+  width: 100%;
+  padding: 0.7rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+  outline: none;
+  font-size: 1rem;
+  transition: border 0.3s;
+}
+#todo-input:focus {
+  border-color: #a259ff;
+}
+#todo-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+#todo-list li {
+  padding: 0.7rem 0.5rem;
+  border-radius: 6px;
+  margin-bottom: 0.5rem;
+  background: #f3eaff;
+  cursor: pointer;
+  transition: background 0.3s, text-decoration 0.3s;
+}
+#todo-list li.done {
+  background: #d1c4e9;
+  text-decoration: line-through;
+  color: #888;
+}

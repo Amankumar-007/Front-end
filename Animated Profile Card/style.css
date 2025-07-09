@@ -1,0 +1,55 @@
+body {
+  background: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+.profile-card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.15);
+  padding: 2rem 2.5rem;
+  text-align: center;
+  width: 300px;
+  animation: pop-in 0.7s cubic-bezier(.68,-0.55,.27,1.55);
+}
+@keyframes pop-in {
+  0% { transform: scale(0.7); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+.avatar {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, #fda085 0%, #f6d365 100%);
+  border-radius: 50%;
+  margin: 0 auto 1rem auto;
+  box-shadow: 0 4px 16px #fda08555;
+  animation: bounce 1.2s infinite alternate;
+}
+@keyframes bounce {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-10px); }
+}
+h2 {
+  margin: 0.5rem 0 0.2rem 0;
+  color: #fda085;
+}
+p {
+  margin: 0 0 1rem 0;
+  color: #888;
+}
+button {
+  padding: 0.7rem 1.5rem;
+  background: linear-gradient(90deg, #fda085, #f6d365);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+button:hover {
+  background: linear-gradient(90deg, #f6d365, #fda085);
+}

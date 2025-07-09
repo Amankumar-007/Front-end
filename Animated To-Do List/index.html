@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animated To-Do List</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="todo-container">
+    <h2>To-Do List</h2>
+    <input type="text" id="todo-input" placeholder="Add a task...">
+    <ul id="todo-list"></ul>
+  </div>
+  <script>
+    const input = document.getElementById('todo-input');
+    const list = document.getElementById('todo-list');
+    input.addEventListener('keydown', function(e) {
+      if (e.key === 'Enter' && input.value.trim() !== '') {
+        const li = document.createElement('li');
+        li.textContent = input.value;
+        li.onclick = () => li.classList.toggle('done');
+        list.appendChild(li);
+        input.value = '';
+      }
+    });
+  </script>
+</body>
+</html>
